@@ -1,0 +1,43 @@
+### 프로젝트 생성
+POST http://localhost:8083/task/project
+Content-Type: application/json
+
+{
+  "name": "projectName",
+  "username": "username"
+}
+
+
+### 멤버 생성
+POST http://localhost:8083/members
+Content-Type: application/json
+
+{
+  "username": "username",
+  "password": "password",
+  "email": "email"
+}
+
+
+### 프로젝트 멤버 조회
+GET http://localhost:8080/task/project/1/members
+
+### 프로젝트 멤버 추가
+POST http://localhost:8080/task/project/1/members
+Content-Type: application/json
+
+{
+  "username": "username22",
+  "loginUsername": "username"
+}
+
+
+### Task 생성
+POST http://localhost:8080/task/project/1/task
+Content-Type: application/json
+
+{
+  "username": "username",
+  "content": "content",
+  "title": "title"
+}
